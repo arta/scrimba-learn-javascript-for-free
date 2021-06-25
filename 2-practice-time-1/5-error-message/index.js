@@ -9,6 +9,6 @@
 let errorMessage = 'Something went wrong, please try again'
 let errorEl = document.getElementById('error-el')
 
-function error() {
+function purchase() {
   errorEl.textContent = errorMessage
 }
