@@ -13,6 +13,12 @@ h1 { color: goldenrod; }
 
 button {
   background: goldenrod;
+  border: none;
+  border-radius: 2px;
   color: #016f32;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
   width: 150px;
 }
