@@ -23,7 +23,7 @@ button {
     border-radius: 20px;
 }
 
-#error {
+#error-el {
     color: red;
     font-weight: 200;
 }
