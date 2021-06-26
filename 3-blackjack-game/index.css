@@ -19,6 +19,7 @@ button {
   border-radius: 2px;
   color: #016f32;
   font-weight: bold;
+  margin-bottom: .5em;
   padding-top: 5px;
   padding-bottom: 5px;
   text-transform: uppercase;
