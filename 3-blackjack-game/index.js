@@ -9,9 +9,19 @@ let messageEl = document.getElementById('message-el')
 let sumEl = document.querySelector('#sum-el')
 let cardsEl = document.getElementById('cards-el')
 
-// Create a function, getRandomCard(), that always returns the number 5
+// Return random Blackjack cards values
+// if 1           return 11
+// if 11, 12, 13  return 10
 function getRandomCard() {
-  return 5
+  let randomNumber1to13 = Math.floor(Math.random() * 13) + 1
+
+  if (randomNumber1to13 === 1) {
+    return 11
+  } else if (randomNumber1to13 > 10) {
+    return 10
+  } else {
+    return randomNumber1to13
+  }
 }
 
 function startGame() {
