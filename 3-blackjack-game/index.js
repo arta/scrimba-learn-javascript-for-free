@@ -25,7 +25,9 @@ function getRandomCard() {
 function startGame() {
   isAlive = true
   cards.push(getRandomCard(), getRandomCard())
-  sum = cards[0] + cards[1]
+  sum = cards.reduce((total, card) => total + card, 0)
+  // for (let i = 0; i < cards.length; i++) { sum += cards[i] }
+  // sum = cards[0] + cards[1]
   renderGame()
 }
 
