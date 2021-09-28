@@ -23,6 +23,7 @@ function getRandomCard() {
 }
 
 function startGame() {
+  cards = []
   isAlive = true
   cards.push(getRandomCard(), getRandomCard())
   sum = cards.reduce((total, card) => total + card, 0)
