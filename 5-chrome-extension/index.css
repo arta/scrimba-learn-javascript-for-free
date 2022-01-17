@@ -1,0 +1,46 @@
+/* ###### */
+/* GLOBAL */
+/* ------ */
+
+:root {
+  --clr-body: #EEE;
+}
+
+*,
+*::after,
+*::before {
+  border: 1px dotted hotpink;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--clr-body);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ########## */
+/* TYPOGRAPHY */
+/* ---------- */
+
+
+/* ###### */
+/* LAYOUT */
+/* ------ */
+
+
+/* ###### */
+/* IMAGES */
+/* ------ */
+
+
+/* ##### */
+/* UTILS */
+/* ----- */
