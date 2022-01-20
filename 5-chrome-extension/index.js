@@ -1,6 +1,8 @@
 const inputBtn = document.getElementById('input-btn')
 const inputEl = document.getElementById('input-el')
 const myLeads = ['www.awesomelead.com', 'www.epiclead.com', 'www.greatlead.com']
+// 2. Grab the unordered list and store it in a const variable called ulEl
+const ulEl = document.getElementById('ul-el')
 
 function saveLead() {
   myLeads.push(inputEl.value)
@@ -8,8 +10,6 @@ function saveLead() {
 }
 
 inputBtn.addEventListener('click', saveLead)
-
-// Log out the items in the myLeads array using a for loop
 
 for (let i = 0; i < myLeads.length; i++) {
   console.log(myLeads[i])
