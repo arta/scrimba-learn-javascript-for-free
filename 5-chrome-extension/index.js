@@ -10,7 +10,15 @@ function saveLead() {
 
 inputBtn.addEventListener('click', saveLead)
 
-// Replace .textContent with .innerHTML and use <li> tags
+// Let's try a different method!
+// Use createElement() and append() instead of innerHTML
 for (let i = 0; i < myLeads.length; i++) {
-  ulEl.innerHTML += `<li>${myLeads[i]}</li>`
+  // ulEl.innerHTML += `<li>${myLeads[i]}</li>`
+
+  // create li element
+  // insert lead
+  // insert element into ul element
+  const liEl = document.createElement('li')
+  liEl.textContent = myLeads[i]
+  ulEl.append(liEl)
 }
