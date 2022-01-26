@@ -10,7 +10,7 @@ function saveLead() {
 
 inputBtn.addEventListener('click', saveLead)
 
-// Render the leads in the unordered list using ulEl.textContent
+// Replace .textContent with .innerHTML and use <li> tags
 for (let i = 0; i < myLeads.length; i++) {
-  ulEl.textContent += `${myLeads[i]} `
+  ulEl.innerHTML += `<li>${myLeads[i]}</li>`
 }
