@@ -5,13 +5,13 @@ const ulEl = document.getElementById('ul-el')
 
 function saveLead() {
   myLeads.push(inputEl.value)
-  // 2. Call the renderLeads() function
+  // Clear out the input field
+  inputEl.value = null
   renderLeads()
 }
 
 inputBtn.addEventListener('click', saveLead)
 
-// 1. Wrap the code below in a renderLeads() function
 function renderLeads() {
   let listItems = ''
   for (let i = 0; i < myLeads.length; i++) {
