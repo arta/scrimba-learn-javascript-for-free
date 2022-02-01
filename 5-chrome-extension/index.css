@@ -1,7 +1,6 @@
 /* ###### */
 /* GLOBAL */
 /* ------ */
-
 :root {
   --clr-body: #EEE;
   --clr-green: #5f9341;
@@ -31,10 +30,19 @@ img {
 /* ########## */
 /* TYPOGRAPHY */
 /* ---------- */
+.ul-el {
+  list-style: none;
+  padding-left: 0;
+}
+
+.li-ul-el { margin-bottom: .625rem; }
 
 
 /* ################# */
 /* ANCHORS & BUTTONS */
+/* ----------------- */
+.a-li-ul-el { color: var(--clr-green); }
+
 /* ----------------- */
 button {
   border: none;

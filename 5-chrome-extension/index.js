@@ -15,8 +15,8 @@ function renderLeads() {
   let listItems = ''
   for (let i = 0; i < myLeads.length; i++) {
     listItems += `
-      <li>
-        <a href=https://${myLeads[i]} target='_blank'>
+      <li class='li-ul-el'>
+        <a class='a-li-ul-el' href=https://${myLeads[i]} target='_blank'>
           ${myLeads[i]}
         </a>
       </li>
