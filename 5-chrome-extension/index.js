@@ -1,13 +1,17 @@
 const inputBtn = document.getElementById('input-btn')
 const inputEl = document.getElementById('input-el')
-const myLeads = []
+let myLeads = []
 const ulEl = document.getElementById('ul-el')
 
-// Get the leads from the localStorage - PS: JSON.parse()
-// Store it in a variable, leadsFromLocalStorage
-// Log out the variable
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem('myLeads'))
-console.log(leadsFromLocalStorage)
+// => null OR ["lead1", "lead2", ..]
+
+// 1. Check if leadsFromLocalStorage is truthy
+// 2. If so, set myLeads to its value and call renderLeads()
+if (leadsFromLocalStorage) {
+  myLeads = leadsFromLocalStorage
+  renderLeads()
+}
 
 function saveLead() {
   myLeads.push(inputEl.value)
