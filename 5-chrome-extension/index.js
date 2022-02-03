@@ -6,6 +6,11 @@ const ulEl = document.getElementById('ul-el')
 function saveLead() {
   myLeads.push(inputEl.value)
   inputEl.value = null
+  // Save the myLeads array to localStorage
+  localStorage.setItem('myLeads', JSON.stringify(myLeads))
+  // console log to verify that it works:
+  console.log(localStorage.getItem('myLeads'))
+
   renderLeads()
 }
 
