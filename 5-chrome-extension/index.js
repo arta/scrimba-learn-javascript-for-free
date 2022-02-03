@@ -3,13 +3,15 @@ const inputEl = document.getElementById('input-el')
 const myLeads = []
 const ulEl = document.getElementById('ul-el')
 
+// Get the leads from the localStorage - PS: JSON.parse()
+// Store it in a variable, leadsFromLocalStorage
+// Log out the variable
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem('myLeads'))
+console.log(leadsFromLocalStorage)
+
 function saveLead() {
   myLeads.push(inputEl.value)
-  // Save the myLeads array to localStorage
   localStorage.setItem('myLeads', JSON.stringify(myLeads))
-  // console log to verify that it works:
-  console.log(localStorage.getItem('myLeads'))
-
   inputEl.value = null
   renderLeads()
 }
