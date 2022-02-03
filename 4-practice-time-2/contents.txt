@@ -1,7 +1,0 @@
-1. Objects & functions
-2. if else
-3. Loops & arrays - for (const .. of ..) {}
-4. #push, #pop, #unshift, #shift - longer make arr longer :)
-5. Logical operators
-6. Rock, paper, scissors - Math, random, floor
-7. Sorting fruits - emojis are just like characters
