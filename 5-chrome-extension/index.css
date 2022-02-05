@@ -46,10 +46,15 @@ img {
 
 /* ----------------- */
 button {
-  border: none;
+  border: 1px solid var(--clr-green);
   font-weight: bold;
   padding: .75em 2em;
   text-transform: uppercase;
+}
+
+.delete-btn {
+  background-color: var(--clr-body);
+  color: var(--clr-green);
 }
 
 .input-btn {

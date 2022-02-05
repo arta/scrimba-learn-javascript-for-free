@@ -4,10 +4,7 @@ let myLeads = []
 const ulEl = document.getElementById('ul-el')
 
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem('myLeads'))
-// => null OR ["lead1", "lead2", ..]
 
-// 1. Check if leadsFromLocalStorage is truthy
-// 2. If so, set myLeads to its value and call renderLeads()
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage
   renderLeads()
