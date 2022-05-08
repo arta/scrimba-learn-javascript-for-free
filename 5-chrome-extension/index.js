@@ -3,8 +3,16 @@ const inputEl = document.getElementById('input-el')
 let myLeads = []
 const ulEl = document.getElementById('ul-el')
 const deleteBtn = document.getElementById('delete-btn')
+// 1. Grab the SAVE TAB button and store it in a tabBtn variable
+const tabBtn = document.getElementById('tab-btn')
 
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem('myLeads'))
+
+// Dummy data for a current tab ..
+// .. in the actual/correct format exposed by Chrome API to us:
+const tabs = [
+  { url: "https://www.linkedin.com/in/per-harald-borgen/" }
+]
 
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage
@@ -25,6 +33,11 @@ function deleteAllLeads() {
 }
 
 inputBtn.addEventListener('click', saveLead)
+
+// 2. Listen for clicks on tabBtn. Log Per's LinkedIn URL to the console
+tabBtn.addEventListener('click', function() {
+  console.log(tabs[0].url)
+})
 
 deleteBtn.addEventListener('dblclick', deleteAllLeads)
 
