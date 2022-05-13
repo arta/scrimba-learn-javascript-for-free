@@ -2,14 +2,16 @@
 /* GLOBAL */
 /* ------ */
 :root {
-  --clr-body: whitesmoke;
+  --clr-body: white;
+  --clr-header: #28283A;
+  --clr-header-bg: whitesmoke;
   font-size: 100%;
 }
 
 *,
 *::after,
 *::before {
-  border: 1px dotted hotpink;
+  /* border: 1px dotted hotpink; */
   box-sizing: border-box;
 }
 
@@ -36,10 +38,18 @@ h2,
   justify-content: space-between;
 }
 
-h1 { font-size: 2.5rem; }
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: .75rem;
+}
 h2 { font-size: .75rem; }
 
 .p-invoice-line { font-size: 1.25rem; }
+.p-tagline {
+  font-weight: 400;
+  margin-bottom: 0;
+}
 
 .span-notes { font-size: .75rem; }
 .span-grandtotal { font-size: 2.25rem; }
@@ -63,6 +73,13 @@ nav {
   margin: 0 auto;
   max-width: 550px;
   width: 80%;
+}
+
+header {
+  background-color: var(--clr-header-bg);
+  color: var(--clr-header);
+  margin-bottom: 2.5rem;
+  padding: 3.125rem 0;
 }
 
 nav {
