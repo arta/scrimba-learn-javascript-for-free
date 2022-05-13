@@ -8,6 +8,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- My kit doesn't work on VSCode's 127.0.0.1:5500 -->
+  <!-- CORS issue? https://stackoverflow.com/a/46576659/247626 -->
+  <!-- so, CDN it is: -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="index.js" defer></script>
   <title>Invoice Creator</title>
 </head>
@@ -55,7 +61,10 @@
       <span class="span-grandtotal">$60</span>
     </p>
 
-    <button class="btn-send-invoice">Send Invoice</button>
+    <button class="btn-send-invoice">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Send Invoice</span>
+    </button>
   </main>
 </body>
 </html>
