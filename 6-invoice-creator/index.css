@@ -2,7 +2,8 @@
 /* GLOBAL */
 /* ------ */
 :root {
-  --clr-body: white;
+  --clr-body: #4A4E74;
+  --clr-body-bg: white;
   --clr-header: #28283A;
   --clr-header-bg: whitesmoke;
   font-size: 100%;
@@ -16,7 +17,8 @@
 }
 
 body {
-  background: var(--clr-body);
+  background-color: var(--clr-body-bg);
+  color: var(--clr-body);
   font-family: 'Inter', sans-serif;
   margin: 0;
 }
@@ -58,7 +60,17 @@ h2 { font-size: .75rem; }
 /* ################# */
 /* ANCHORS & BUTTONS */
 /* ----------------- */
-.btn-select-service { font-size: .875rem; }
+.btn-add-service {
+  background-color: var(--clr-body-bg);
+  border: 2px solid #D5D4D8;
+  border-radius: 5px;
+  font-size: .875rem;
+  font-weight: 500;
+  padding: 1em 1.5em;
+}
+.btn-add-service:hover {
+  border: 2px solid var(--clr-body);
+}
 .btn-send-invoice {
   font-size: 1rem;
   width: 100%;
@@ -85,6 +97,7 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2.875rem;
 }
 
 
