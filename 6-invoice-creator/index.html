@@ -15,13 +15,13 @@
 <body>
   <header>
     <h1>Invoice Creator</h1>
-    <p>Thanks for choosing GoodCorp, LLC!</p>
+    <p class="p-tagline">Thanks for choosing GoodCorp, LLC!</p>
   </header>
 
   <nav>
-    <button>Wash Car: $10</button>
-    <button>Mow Lawn: $20</button>
-    <button>Pull Weeds: $30</button>
+    <button class="btn-select-service">Wash Car: $10</button>
+    <button class="btn-select-service">Mow Lawn: $20</button>
+    <button class="btn-select-service">Pull Weeds: $30</button>
   </nav>
 
   <section>
@@ -30,15 +30,15 @@
       <span>Total</span>
     </h2>
 
-    <p>
+    <p class="p-invoice-line">
       <span>Wash Car</span>
       <span><span>$</span>10</span>
     </p>
-    <p>
+    <p class="p-invoice-line">
       <span>Mow Lawn</span>
       <span><span>$</span>20</span>
     </p>
-    <p>
+    <p class="p-invoice-line">
       <span>Pull Weeds</span>
       <span><span>$</span>30</span>
     </p>
@@ -49,11 +49,13 @@
     </h2>
 
     <p>
-      <span>We accept cash, credit cards, or PayPal</span>
-      <span>$60</span>
+      <span class="span-notes">
+        We accept cash, credit cards, or PayPal
+      </span>
+      <span class="span-grandtotal">$60</span>
     </p>
   </section>
 
-  <button>Send Invoice</button>
+  <button class="btn-send-invoice">Send Invoice</button>
 </body>
 </html>

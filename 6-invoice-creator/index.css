@@ -3,6 +3,7 @@
 /* ------ */
 :root {
   --clr-body: whitesmoke;
+  font-size: 100%;
 }
 
 *,
@@ -15,7 +16,6 @@
 body {
   background: var(--clr-body);
   font-family: 'Inter', sans-serif;
-  font-size: 1.5rem;
   margin: 0;
 }
 
@@ -23,11 +23,22 @@ body {
 /* ########## */
 /* TYPOGRAPHY */
 /* ---------- */
+h1, h2, p { margin-top: 0; }
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: .75rem; }
+
+.p-invoice-line { font-size: 1.25rem; }
+
+.span-notes { font-size: .75rem; }
+.span-grandtotal { font-size: 2.25rem; }
 
 
 /* ################# */
 /* ANCHORS & BUTTONS */
 /* ----------------- */
+.btn-select-service { font-size: .875rem; }
+.btn-send-invoice { font-size: 1rem; }
 
 
 /* ###### */
