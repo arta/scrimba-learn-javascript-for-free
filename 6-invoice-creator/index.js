@@ -22,29 +22,34 @@ const spanNotes       = get('span-notes')
 const spanTotal       = get('span-total')
 
 const services = [
-  { name: 'Wash Car', price: 10 },
-  { name: 'Mow Lawn', price: 20 },
-  { name: 'Pull Weeds', price: 30 }
+  { id: 0, name: 'Wash Car', price: 10 },
+  { id: 1, name: 'Mow Lawn', price: 20 },
+  { id: 2, name: 'Pull Weeds', price: 30 }
 ]
 
+let serviceIdsAdded = []
 let total = 0
 
 function addService(service) {
-  invoiceLines.innerHTML += `
-    <p class="p-invoice-line">
-      <span>${service.name}</span>
-      <span class="span-price"><span>$</span>${service.price}</span>
-    </p>
-  `
-  spanNotes.textContent = 'We accept cash, credit cards, or PayPal'
-  total += service.price
-  spanTotal.textContent = `$${total}`
+  if (!serviceIdsAdded.includes(service.id)) {
+    invoiceLines.innerHTML += `
+      <p class="p-invoice-line">
+        <span>${service.name}</span>
+        <span class="span-price"><span>$</span>${service.price}</span>
+      </p>
+    `
+    serviceIdsAdded.push(service.id)
+    spanNotes.textContent = 'We accept cash, credit cards, or PayPal'
+    total += service.price
+    spanTotal.textContent = `$${total}`
+  }
 }
 
 function sendInvoice() {
   invoiceLines.innerHTML = ''
   spanNotes.textContent = ''
   total = 0
+  serviceIdsAdded.length = 0
   spanTotal.textContent = `$${0}`
 }
 
