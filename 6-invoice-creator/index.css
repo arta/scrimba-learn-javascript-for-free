@@ -56,7 +56,12 @@ h2 {
   text-transform: uppercase;
 }
 
-.h2-invoice-bottom { font-weight: 600; }
+.h2-invoice-bottom {
+  border-top: 2px solid #D5D4D8;
+  font-weight: 600;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
 
 .p-invoice-line {
   font-size: 1.25rem;
