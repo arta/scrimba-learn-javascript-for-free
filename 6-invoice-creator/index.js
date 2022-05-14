@@ -19,6 +19,7 @@ const services = [
 const get = (elemementId) => document.getElementById(elemementId)
 
 const btnWashCar = get('btn-wash-car')
+const btnMowLawn = get('btn-mow-lawn')
 const invoiceLines = get('invoice-lines')
 const spanNotes = get('span-notes')
 const spanTotal = get('span-total')
@@ -38,10 +39,21 @@ btnWashCar.addEventListener('click', function() {
   spanTotal.textContent = `$${total}`
 })
 
+btnMowLawn.addEventListener('click', function () {
+  invoiceLines.innerHTML += `
+    <p class="p-invoice-line">
+      <span>Mow Lawn</span>
+      <span class="span-price"><span>$</span>20</span>
+    </p>
+  `
+  spanNotes.textContent = 'We accept cash, credit cards, or PayPal'
+  total += 20
+  spanTotal.textContent = `$${total}`
+})
+
 btnSendInvoice.addEventListener('click', function() {
   invoiceLines.innerHTML = ''
   spanNotes.textContent = ''
   total = 0
   spanTotal.textContent = `$${0}`
 })
-
