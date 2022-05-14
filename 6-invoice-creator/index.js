@@ -10,29 +10,24 @@
 // listen for send invoice button click to "send" (reset)
 // write function that "sends" (resets) the invoice
 
+const get = (elemementId) => document.getElementById(elemementId)
+
+const btnWashCar      = get('btn-wash-car')
+const btnMowLawn      = get('btn-mow-lawn')
+const btnPullWeeds    = get('btn-pull-weeds')
+const btnSendInvoice  = get('btn-send-invoice')
+
+const invoiceLines    = get('invoice-lines')
+const spanNotes       = get('span-notes')
+const spanTotal       = get('span-total')
+
 const services = [
   { name: 'Wash Car', price: 10 },
   { name: 'Mow Lawn', price: 20 },
   { name: 'Pull Weeds', price: 30 }
 ]
 
-const get = (elemementId) => document.getElementById(elemementId)
-
-const btnWashCar = get('btn-wash-car')
-const btnMowLawn = get('btn-mow-lawn')
-const btnPullWeeds = get('btn-pull-weeds')
-const invoiceLines = get('invoice-lines')
-const spanNotes = get('span-notes')
-const spanTotal = get('span-total')
-const btnSendInvoice = get('btn-send-invoice')
-
 let total = 0
-
-btnWashCar.addEventListener('click', () => addService(services[0]))
-btnMowLawn.addEventListener('click', () => addService(services[1]))
-btnPullWeeds.addEventListener('click', () => addService(services[2]))
-
-btnSendInvoice.addEventListener('click', sendInvoice)
 
 function addService(service) {
   invoiceLines.innerHTML += `
@@ -52,3 +47,9 @@ function sendInvoice() {
   total = 0
   spanTotal.textContent = `$${0}`
 }
+
+btnWashCar.addEventListener('click', () => addService(services[0]))
+btnMowLawn.addEventListener('click', () => addService(services[1]))
+btnPullWeeds.addEventListener('click', () => addService(services[2]))
+
+btnSendInvoice.addEventListener('click', sendInvoice)
