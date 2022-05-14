@@ -9,3 +9,22 @@
 // disallow adding a service more than once
 // listen for send invoice button click to "send" (reset)
 // write function that "sends" (resets) the invoice
+
+const services = [
+  { name: 'Wash Car', price: 10 },
+  { name: 'Mow Lawn', price: 20 },
+  { name: 'Pull Weeds', price: 30 }
+]
+
+const btnWashCar = document.getElementById('btn-wash-car')
+const invoiceLines = document.getElementById('invoice-lines')
+
+btnWashCar.addEventListener('click', function() {
+  invoiceLines.innerHTML += `
+    <p class="p-invoice-line">
+      <span>Wash Car</span>
+      <span class="span-price"><span>$</span>10</span>
+    </p>
+  `
+})
+
