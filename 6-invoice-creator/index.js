@@ -26,8 +26,8 @@ const services = [
   { id: 1, name: 'Mow Lawn', price: 20 },
   { id: 2, name: 'Pull Weeds', price: 30 }
 ]
+const serviceIdsAdded = []
 
-let serviceIdsAdded = []
 let total = 0
 
 function addService(service) {
