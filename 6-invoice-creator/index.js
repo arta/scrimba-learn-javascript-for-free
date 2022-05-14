@@ -20,6 +20,7 @@ const get = (elemementId) => document.getElementById(elemementId)
 
 const btnWashCar = get('btn-wash-car')
 const invoiceLines = get('invoice-lines')
+const btnSendInvoice = get('btn-send-invoice')
 
 btnWashCar.addEventListener('click', function() {
   invoiceLines.innerHTML += `
@@ -28,5 +29,9 @@ btnWashCar.addEventListener('click', function() {
       <span class="span-price"><span>$</span>10</span>
     </p>
   `
+})
+
+btnSendInvoice.addEventListener('click', function() {
+  invoiceLines.innerHTML = ''
 })
 
