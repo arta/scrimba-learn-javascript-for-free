@@ -31,12 +31,7 @@ btnWashCar.addEventListener('click', () => addService(services[0]))
 
 btnMowLawn.addEventListener('click', () => addService(services[1]))
 
-btnSendInvoice.addEventListener('click', function() {
-  invoiceLines.innerHTML = ''
-  spanNotes.textContent = ''
-  total = 0
-  spanTotal.textContent = `$${0}`
-})
+btnSendInvoice.addEventListener('click', sendInvoice)
 
 function addService(service) {
   invoiceLines.innerHTML += `
@@ -48,4 +43,11 @@ function addService(service) {
   spanNotes.textContent = 'We accept cash, credit cards, or PayPal'
   total += service.price
   spanTotal.textContent = `$${total}`
+}
+
+function sendInvoice() {
+  invoiceLines.innerHTML = ''
+  spanNotes.textContent = ''
+  total = 0
+  spanTotal.textContent = `$${0}`
 }
