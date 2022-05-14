@@ -57,16 +57,35 @@ h2 {
 
 .h2-invoice-bottom { font-weight: 600; }
 
-.p-invoice-line { font-size: 1.25rem; }
+.p-invoice-line {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
 
 .p-tagline {
   font-weight: 400;
   margin-bottom: 0;
 }
 
-.span-notes { font-size: .75rem; }
+.span-notes {
+  font-size: .75rem;
+  font-weight: 400;
+}
 
-.span-grandtotal { font-size: 2.25rem; }
+.span-price {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.span-price span {
+  color: var(--clr-h2);
+  font-weight: 300;
+}
+
+.span-total {
+  font-size: 2.25rem;
+  font-weight: 600;
+}
 
 
 /* ################# */
@@ -80,9 +99,11 @@ h2 {
   font-weight: 500;
   padding: 1em 1.5em;
 }
+
 .btn-add-service:hover {
   border: 2px solid var(--clr-body);
 }
+
 .btn-send-invoice {
   font-size: 1rem;
   width: 100%;

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- My kit doesn't work on VSCode's 127.0.0.1:5500 -->
   <!-- CORS issue? https://stackoverflow.com/a/46576659/247626 -->
   <!-- so, CDN it is: -->
@@ -38,15 +38,15 @@
 
     <p class="p-invoice-line">
       <span>Wash Car</span>
-      <span><span>$</span>10</span>
+      <span class="span-price"><span>$</span>10</span>
     </p>
     <p class="p-invoice-line">
       <span>Mow Lawn</span>
-      <span><span>$</span>20</span>
+      <span class="span-price"><span>$</span>20</span>
     </p>
     <p class="p-invoice-line">
       <span>Pull Weeds</span>
-      <span><span>$</span>30</span>
+      <span class="span-price"><span>$</span>30</span>
     </p>
 
     <h2 class="h2-invoice-bottom">
@@ -58,7 +58,7 @@
       <span class="span-notes">
         We accept cash, credit cards, or PayPal
       </span>
-      <span class="span-grandtotal">$60</span>
+      <span class="span-total">$60</span>
     </p>
 
     <button class="btn-send-invoice">
