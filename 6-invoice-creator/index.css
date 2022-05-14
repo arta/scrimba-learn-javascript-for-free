@@ -4,6 +4,7 @@
 :root {
   --clr-body: #4A4E74;
   --clr-body-bg: white;
+  --clr-blue: #3770ED;
   --clr-h2: #918E9B;
   --clr-header: #28283A;
   --clr-header-bg: whitesmoke;
@@ -91,10 +92,14 @@ h2 {
 /* ################# */
 /* ANCHORS & BUTTONS */
 /* ----------------- */
+button {
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+
 .btn-add-service {
   background-color: var(--clr-body-bg);
   border: 2px solid #D5D4D8;
-  border-radius: 5px;
   font-size: .875rem;
   font-weight: 500;
   padding: 1em 1.5em;
@@ -105,7 +110,12 @@ h2 {
 }
 
 .btn-send-invoice {
+  background-color: var(--clr-blue);
+  color: white;
   font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1.125rem;
+  padding: .875em;
   width: 100%;
 }
 
@@ -132,6 +142,8 @@ nav {
   justify-content: space-between;
   margin-bottom: 2.875rem;
 }
+
+.fa-envelope { margin-right: .5rem; }
 
 
 /* ##### */
