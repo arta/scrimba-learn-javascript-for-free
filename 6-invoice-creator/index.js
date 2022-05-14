@@ -40,5 +40,8 @@ btnWashCar.addEventListener('click', function() {
 
 btnSendInvoice.addEventListener('click', function() {
   invoiceLines.innerHTML = ''
+  spanNotes.textContent = ''
+  total = 0
+  spanTotal.textContent = `$${0}`
 })
 
