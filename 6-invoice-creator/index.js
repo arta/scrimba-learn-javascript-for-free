@@ -20,6 +20,7 @@ const get = (elemementId) => document.getElementById(elemementId)
 
 const btnWashCar = get('btn-wash-car')
 const btnMowLawn = get('btn-mow-lawn')
+const btnPullWeeds = get('btn-pull-weeds')
 const invoiceLines = get('invoice-lines')
 const spanNotes = get('span-notes')
 const spanTotal = get('span-total')
@@ -28,8 +29,8 @@ const btnSendInvoice = get('btn-send-invoice')
 let total = 0
 
 btnWashCar.addEventListener('click', () => addService(services[0]))
-
 btnMowLawn.addEventListener('click', () => addService(services[1]))
+btnPullWeeds.addEventListener('click', () => addService(services[2]))
 
 btnSendInvoice.addEventListener('click', sendInvoice)
 
