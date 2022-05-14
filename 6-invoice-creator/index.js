@@ -27,13 +27,9 @@ const btnSendInvoice = get('btn-send-invoice')
 
 let total = 0
 
-btnWashCar.addEventListener('click', function() {
-  addService(services[0])
-})
+btnWashCar.addEventListener('click', () => addService(services[0]))
 
-btnMowLawn.addEventListener('click', function () {
-  addService(services[1])
-})
+btnMowLawn.addEventListener('click', () => addService(services[1]))
 
 btnSendInvoice.addEventListener('click', function() {
   invoiceLines.innerHTML = ''
