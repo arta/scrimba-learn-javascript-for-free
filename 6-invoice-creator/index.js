@@ -28,27 +28,11 @@ const btnSendInvoice = get('btn-send-invoice')
 let total = 0
 
 btnWashCar.addEventListener('click', function() {
-  invoiceLines.innerHTML += `
-    <p class="p-invoice-line">
-      <span>Wash Car</span>
-      <span class="span-price"><span>$</span>10</span>
-    </p>
-  `
-  spanNotes.textContent = 'We accept cash, credit cards, or PayPal'
-  total += 10
-  spanTotal.textContent = `$${total}`
+  addService(services[0])
 })
 
 btnMowLawn.addEventListener('click', function () {
-  invoiceLines.innerHTML += `
-    <p class="p-invoice-line">
-      <span>Mow Lawn</span>
-      <span class="span-price"><span>$</span>20</span>
-    </p>
-  `
-  spanNotes.textContent = 'We accept cash, credit cards, or PayPal'
-  total += 20
-  spanTotal.textContent = `$${total}`
+  addService(services[1])
 })
 
 btnSendInvoice.addEventListener('click', function() {
@@ -57,3 +41,15 @@ btnSendInvoice.addEventListener('click', function() {
   total = 0
   spanTotal.textContent = `$${0}`
 })
+
+function addService(service) {
+  invoiceLines.innerHTML += `
+    <p class="p-invoice-line">
+      <span>${service.name}</span>
+      <span class="span-price"><span>$</span>${service.price}</span>
+    </p>
+  `
+  spanNotes.textContent = 'We accept cash, credit cards, or PayPal'
+  total += service.price
+  spanTotal.textContent = `$${total}`
+}
