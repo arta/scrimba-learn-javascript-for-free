@@ -16,8 +16,10 @@ const services = [
   { name: 'Pull Weeds', price: 30 }
 ]
 
-const btnWashCar = document.getElementById('btn-wash-car')
-const invoiceLines = document.getElementById('invoice-lines')
+const get = (elemementId) => document.getElementById(elemementId)
+
+const btnWashCar = get('btn-wash-car')
+const invoiceLines = get('invoice-lines')
 
 btnWashCar.addEventListener('click', function() {
   invoiceLines.innerHTML += `
