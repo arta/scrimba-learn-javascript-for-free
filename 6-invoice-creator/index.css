@@ -5,6 +5,7 @@
   --clr-body: #4A4E74;
   --clr-body-bg: white;
   --clr-blue: #3770ED;
+  --clr-blue-dark: #1b57db;
   --clr-h2: #918E9B;
   --clr-header: #28283A;
   --clr-header-bg: whitesmoke;
@@ -124,6 +125,7 @@ button {
   width: 100%;
 }
 
+.btn-send-invoice:hover { background-color: var(--clr-blue-dark);}
 
 /* ###### */
 /* LAYOUT */
