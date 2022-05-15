@@ -59,7 +59,7 @@ function render() {
     invoiceLinesStr += `
       <p class="p-invoice-line">
         <span>
-          <span>${servicesAdded[i].name}</span>
+          <span class="span-service-name">${servicesAdded[i].name}</span>
           <button onClick="remove(${i})">Remove</button>
         </span>
         <span class="span-price"><span>$</span>${servicesAdded[i].price}</span>
