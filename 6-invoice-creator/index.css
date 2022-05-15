@@ -89,8 +89,6 @@ h2 {
   font-weight: 300;
 }
 
-.span-service-name { margin-right: .5em; }
-
 .span-total {
   font-size: 2.25rem;
   font-weight: 600;
@@ -116,6 +114,8 @@ button {
 .btn-add-service:hover {
   border: 2px solid var(--clr-body);
 }
+
+.btn-remove-service { margin-left: .5em; }
 
 .btn-send-invoice {
   background-color: var(--clr-blue);
