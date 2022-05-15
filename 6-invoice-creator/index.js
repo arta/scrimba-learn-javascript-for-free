@@ -40,15 +40,24 @@ function add(service) {
   render()
 }
 
+function remove(i) {
+  total -= servicesAdded[i].price
+  servicesAdded.splice(i, 1)
+  render()
+}
+
 function render() {
   let invoiceLinesStr = ''
   for (let i = 0; i < servicesAdded.length; i++) {
     invoiceLinesStr += `
-    <p class="p-invoice-line">
-      <span>${servicesAdded[i].name}</span>
-      <span class="span-price"><span>$</span>${servicesAdded[i].price}</span>
-    </p>
-  `
+      <p class="p-invoice-line">
+        <span>
+          <span>${servicesAdded[i].name}</span>
+          <button onClick="remove(${i})">Remove</button>
+        </span>
+        <span class="span-price"><span>$</span>${servicesAdded[i].price}</span>
+      </p>
+    `
   }
   invoiceLines.innerHTML = invoiceLinesStr
   spanNotes.textContent = 'We accept cash, credit cards, or PayPal'
