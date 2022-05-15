@@ -27,13 +27,13 @@ const services = [
   { id: 1, name: 'Mow Lawn', price: 20 },
   { id: 2, name: 'Pull Weeds', price: 30 }
 ]
-const serviceIdsAdded = []
+
 const servicesAdded = []
 let total = 0
 
 function addService(service) {
+  const serviceIdsAdded = servicesAdded.map( (s) => s.id )
   if (!serviceIdsAdded.includes(service.id)) {
-    serviceIdsAdded.push(service.id)
     servicesAdded.push(services[service.id])
     total += services[service.id].price
   }
@@ -59,7 +59,6 @@ function sendInvoice() {
   invoiceLines.innerHTML = ''
   spanNotes.textContent = ''
   total = 0
-  serviceIdsAdded.length = 0
   servicesAdded.length = 0
   spanTotal.textContent = `$${0}`
 }
