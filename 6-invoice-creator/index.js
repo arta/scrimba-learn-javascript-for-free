@@ -31,16 +31,16 @@ const services = [
 const servicesAdded = []
 let total = 0
 
-function addService(service) {
+function add(service) {
   const serviceIdsAdded = servicesAdded.map( (s) => s.id )
   if (!serviceIdsAdded.includes(service.id)) {
     servicesAdded.push(services[service.id])
     total += services[service.id].price
   }
-  renderInvoice()
+  render()
 }
 
-function renderInvoice() {
+function render() {
   let invoiceLinesStr = ''
   for (let i = 0; i < servicesAdded.length; i++) {
     invoiceLinesStr += `
@@ -55,16 +55,16 @@ function renderInvoice() {
   spanTotal.textContent = `$${total}`
 }
 
-function sendInvoice() {
+function send() {
+  servicesAdded.length = 0
+  total = 0
   invoiceLines.innerHTML = ''
   spanNotes.textContent = ''
-  total = 0
-  servicesAdded.length = 0
-  spanTotal.textContent = `$${0}`
+  spanTotal.textContent = '$0'
 }
 
-btnWashCar.addEventListener('click', () => addService(services[0]))
-btnMowLawn.addEventListener('click', () => addService(services[1]))
-btnPullWeeds.addEventListener('click', () => addService(services[2]))
+btnWashCar.addEventListener('click', () => add(services[0]))
+btnMowLawn.addEventListener('click', () => add(services[1]))
+btnPullWeeds.addEventListener('click', () => add(services[2]))
 
-btnSendInvoice.addEventListener('click', sendInvoice)
+btnSendInvoice.addEventListener('click', send)
