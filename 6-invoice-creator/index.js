@@ -53,7 +53,7 @@ function render() {
       <p class="p-invoice-line">
         <span>
           <span>${servicesAdded[i].name}</span>
-          <button onClick="remove(${i})">Remove</button>
+          <button onClick="return remove(${i})">Remove</button>
         </span>
         <span class="span-price"><span>$</span>${servicesAdded[i].price}</span>
       </p>
