@@ -36,8 +36,8 @@ function add(service) {
   if (!servicesAddedIds.includes(service.id)) {
     servicesAdded.push(services[service.id])
     calcTotal()
+    render()
   }
-  render()
 }
 
 function calcTotal() {
@@ -73,10 +73,10 @@ function render() {
 
 function send() {
   servicesAdded.length = 0
-  total = 0
+  calcTotal()
   invoiceLines.innerHTML = ''
   spanNotes.textContent = ''
-  spanTotal.textContent = '$0'
+  spanTotal.textContent = `$${total}`
 }
 
 btnWashCar.addEventListener('click', () => add(services[0]))
