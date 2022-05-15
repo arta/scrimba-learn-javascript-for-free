@@ -32,8 +32,8 @@ const servicesAdded = []
 let total = 0
 
 function add(service) {
-  const serviceIdsAdded = servicesAdded.map( (s) => s.id )
-  if (!serviceIdsAdded.includes(service.id)) {
+  const servicesAddedIds = servicesAdded.map( (s) => s.id )
+  if (!servicesAddedIds.includes(service.id)) {
     servicesAdded.push(services[service.id])
     total += services[service.id].price
   }
