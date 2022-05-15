@@ -35,14 +35,21 @@ function add(service) {
   const servicesAddedIds = servicesAdded.map( (s) => s.id )
   if (!servicesAddedIds.includes(service.id)) {
     servicesAdded.push(services[service.id])
-    total += services[service.id].price
+    calcTotal()
   }
   render()
 }
 
+function calcTotal() {
+  total = servicesAdded.reduce(
+    (sum, service) => { return sum + service.price }, 0
+  )
+  return total
+}
+
 function remove(i) {
-  total -= servicesAdded[i].price
   servicesAdded.splice(i, 1)
+  calcTotal()
   render()
 }
 
