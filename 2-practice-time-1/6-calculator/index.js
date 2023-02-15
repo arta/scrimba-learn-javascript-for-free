@@ -13,27 +13,27 @@ document.getElementById("num2-el").textContent = num2
 
 function add() {
   result = num1 + num2
-  updateResultEl()
+  updateResultEl('Sum')
 }
 
 function subtract() {
   result = num1 - num2
-  updateResultEl()
+  updateResultEl('Difference')
 }
 
 function divide() {
   result = num1 / num2
-  updateResultEl()
+  updateResultEl('Quotient')
 }
 
 function multiply() {
   result = num1 * num2
-  updateResultEl()
+  updateResultEl('Product')
 }
 
-let resultEl = document.getElementById('result-el')
-let resultElInitContent = resultEl.textContent
+const resultEl = document.getElementById('result-el')
+let result = 0
 
-function updateResultEl() {
-  resultEl.textContent = resultElInitContent + result
+function updateResultEl(resultName) {
+  resultEl.textContent = resultName + ': ' + result
 }
