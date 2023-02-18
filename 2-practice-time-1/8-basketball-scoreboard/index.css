@@ -3,10 +3,58 @@
 *::before { border: 1px dotted hotpink; }
 
 body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+h3,
+p {
   margin: 0;
 }
 
+h3 {
+  color: #EEE;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: .6em;
+  /* padding: .6em .3em; */
+}
+
+p {
+  background: #080001;
+  color: #F94F6D;
+  font-size: 5.625rem;
+  margin-bottom: .4em;
+  /* margin: 0 .1em .4em; */
+  padding: .1em;
+}
+
+button {
+  background: #1B244A;
+  border: 2px solid #9AABD8;
+  border-radius: 5px;
+  color: #9AABD8;
+  font-size: 1.125rem;
+  padding: .5em .4em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
 .container {
+  background: #1B244A;
   display: flex;
   justify-content: space-around;
+  margin: 1em auto 0;
+  max-width: 500px;
+  padding: 2.8em;
+  width: 80%;
+}
+
+.container>* {
+  margin: 0 .5em;
+  min-width: 150px;
 }
