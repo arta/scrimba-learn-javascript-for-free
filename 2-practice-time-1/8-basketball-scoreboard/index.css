@@ -1,0 +1,12 @@
+*,
+*::after,
+*::before { border: 1px dotted hotpink; }
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
