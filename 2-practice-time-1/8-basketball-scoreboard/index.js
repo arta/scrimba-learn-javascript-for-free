@@ -2,7 +2,6 @@ let homeScore = 0
 let guestScore = 0
 const displayHome = document.getElementById('display-home')
 const displayGuest = document.getElementById('display-guest')
-const resetScores = document.getElementById('btn-reset')
 
 function reset() {
   increaseHomeScoreBy(homeScore * (-1))
