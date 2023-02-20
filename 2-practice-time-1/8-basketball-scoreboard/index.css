@@ -1,6 +1,4 @@
-*,
-*::after,
-*::before { border: 1px dotted hotpink; }
+/* *, *::after, *::before { border: 1px dotted hotpink; } */
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -39,6 +37,17 @@ button {
   padding: .5em .4em;
 }
 
+.btn-reset  {
+  border-color: #6e7da8;
+  color: #6e7da8;
+  font-size: .8rem;
+}
+
+.reset-scores {
+  margin-bottom: 3em;
+  width: 100%;
+}
+
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -47,6 +56,7 @@ button {
 .container {
   background: #1B244A;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin: 1em auto 0;
   max-width: 500px;
@@ -54,7 +64,7 @@ button {
   width: 80%;
 }
 
-.container>* {
+.container > .display {
   margin: 0 .5em;
   min-width: 150px;
 }
